@@ -1,0 +1,61 @@
+/*
+Color Palette
+#e7dfd5;
+#84a9ac;
+#3b6978;
+#204051;
+*/
+body {
+  background-color: #204051;
+}
+
+a {
+  color: #84a9ac;
+  font-family: 'Roboto', sans-serif;
+  padding: 2%;
+}
+
+a:hover {
+  color: #e7dfd5;
+}
+
+h1{
+  font-family: 'Dancing Script', cursive;
+  color: #e7dfd5;
+  font-size: 4rem;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  color: #e7dfd5;
+}
+
+.jumbotron {
+  background-color: #204051;
+  padding-top: 1%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.brand-img{
+  width: 35px;
+  height: 35px;
+}
+
+.menu-button{
+  width: 20px;
+  height: 20px;
+}
+
+.container{
+  margin-top:  7%;
+  text-align: center;
+}
+
+.heading h1{
+  padding-bottom: 4%;
+}
+
+.fa-folder{
+  color: #45A29E;
+}
