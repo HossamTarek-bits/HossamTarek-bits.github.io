@@ -1,61 +1,121 @@
 /*
 Color Palette
-#e7dfd5;
-#84a9ac;
-#3b6978;
-#204051;
+#f9f7f7;
+#dbe2ef;
+#3f72af;
+#112d4e;
 */
 body {
-  background-color: #204051;
+  color: #f9f7f7;
+  background-color: #112d4e;
+  background-image: url("../images/background.png");
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 a {
-  color: #84a9ac;
-  font-family: 'Roboto', sans-serif;
+  color: #dbe2ef;
+  font-weight: 100;
   padding: 2%;
 }
 
 a:hover {
-  color: #e7dfd5;
+  color: #f9f7f7;
 }
 
-h1{
+h1 {
   font-family: 'Dancing Script', cursive;
-  color: #e7dfd5;
-  font-size: 4rem;
-}
-
-h3{
-  font-family: 'Roboto', sans-serif;
-  color: #e7dfd5;
-}
-
-.jumbotron {
-  background-color: #204051;
-  padding-top: 1%;
-  border-bottom-left-radius: 3%;
-  border-bottom-right-radius: 3%;
-}
-
-.brand-img{
-  width: 35px;
-  height: 35px;
-}
-
-.menu-button{
-  width: 20px;
-  height: 20px;
-}
-
-.container{
-  margin-top:  7%;
-  text-align: center;
-}
-
-.heading h1{
+  font-size: 4.5rem;
+  font-weight: 700;
   padding-bottom: 4%;
 }
 
-.fa-folder{
-  color: #45A29E;
+h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: 300;
+}
+
+
+.title {
+  background-color: transparent;
+}
+
+
+@media (max-width: 576px) {
+  .title {
+    margin-top: 4rem;
+  }
+}
+
+.brand-img {
+  opacity: 0.8;
+}
+
+.brand-img:hover {
+  opacity: 1;
+}
+
+.menu-button {
+  height: 20px;
+  width: 20px;
+}
+
+.bird {
+  display: none;
+  height: 150px;
+  width: 200px;
+  position: absolute;
+}
+
+.title-image{
+  transform: rotate(45deg);
+  top: 15%;
+  left: 25px;
+}
+
+.about-image{
+  transform: rotate(-45deg);
+  top: 15%;
+  right: 25px;
+}
+
+/* Sections*/
+.About-Me, .Skills, .Contact-Me {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.9;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 576px) {
+  .About-Me, .Skills, .Contact-Me {
+    padding: 4rem 2rem;
+  }
+}
+
+/* About Me */
+.mind-shape, .current-field {
+  color: #3f72af;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  .bird {
+    display: inherit;
+  }
+}
+
+
+/* Skills */
+.list-group-item {
+  background-color: transparent;
+}
+
+.list-heading {
+  color: #dbe2ef;
 }
