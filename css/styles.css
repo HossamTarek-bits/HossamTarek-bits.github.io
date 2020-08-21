@@ -40,11 +40,13 @@ h3 {
   font-weight: 300;
 }
 
+i{
+  margin-top: 1rem;
+}
 
 .title {
   background-color: transparent;
 }
-
 
 @media (max-width: 576px) {
   .title {
@@ -72,13 +74,13 @@ h3 {
   position: absolute;
 }
 
-.title-image{
+.title-image {
   transform: rotate(45deg);
   top: 15%;
   left: 25px;
 }
 
-.about-image{
+.about-image {
   transform: rotate(-45deg);
   top: 15%;
   right: 25px;
@@ -109,7 +111,6 @@ h3 {
     display: inherit;
   }
 }
-
 
 /* Skills */
 .list-group-item {
