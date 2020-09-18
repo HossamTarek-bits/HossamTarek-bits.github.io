@@ -112,6 +112,22 @@ i{
   }
 }
 
+/* Projects */
+.card{
+  background-color: transparent;
+  border: 0;
+}
+.card-title{
+  font-family: 'Dancing Script',cursive;
+}
+
+.card .btn{
+  background-color: transparent;
+  border-color: #f9f7f7;
+  margin-right: 1rem;
+}
+
+
 /* Skills */
 .list-group-item {
   background-color: transparent;
