@@ -1,15 +1,24 @@
 /*
 Color Palette
-#f9f7f7;
-#dbe2ef;
-#3f72af;
-#112d4e;
+#eeeeee;
+#686d76;
+#11111d;
+#19d3da;
+font-family: 'Menlo Regular', monospace;
+font-family: 'PT Mono', monospace;
 */
+@font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('../Fonts/Menlo-Regular.woff') format('woff');
+  }
+
+
 body {
-  color: #f9f7f7;
-  background-color: #112d4e;
-  background-image: url("../images/background.png");
-  font-family: "Roboto", sans-serif;
+  color: #eeeeee;
+  background-color: #11111d;
+  font-family: 'PT Mono', monospace;
   text-align: center;
 }
 
@@ -20,14 +29,17 @@ a {
 }
 
 a:hover {
-  color: #f9f7f7;
+  color: #19d3da;
 }
 
 h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 4.5rem;
+  padding-top: 10%;
+  font-family: 'Menlo Regular', monospace;
+  font-size: 1.8rem;
   font-weight: 700;
   padding-bottom: 4%;
+  color: #19d3da;
+
 }
 
 h2 {
@@ -35,7 +47,8 @@ h2 {
   padding-bottom: 2rem;
 }
 
-h3 {
+.terminal {
+  color: #eeeeee;
   font-size: 1.45rem;
   font-weight: 300;
 }
@@ -88,7 +101,7 @@ i{
 
 /* Sections*/
 .About-Me, .Skills, .Contact-Me {
-  font-family: "Roboto", sans-serif;
+  font-family: 'PT Mono', monospace;
   line-height: 1.9;
   padding: 2rem 1rem;
 }
@@ -101,15 +114,8 @@ i{
 
 /* About Me */
 .mind-shape, .current-field {
-  color: #3f72af;
-  font-style: italic;
+  color: #19d3da;
   font-weight: bold;
-}
-
-@media (min-width: 1000px) {
-  .bird {
-    display: inherit;
-  }
 }
 
 /* Projects */
