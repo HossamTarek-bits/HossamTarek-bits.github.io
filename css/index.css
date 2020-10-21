@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 0;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+a{
+    padding: 0;
+}
+
+h1{
+    margin: 2rem 0;
+    width: fit-content;
+}
+
+h2 {
+    font-size: 1.3rem;
+    display: inline;
+}

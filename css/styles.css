@@ -8,137 +8,143 @@ font-family: 'Menlo Regular', monospace;
 font-family: 'PT Mono', monospace;
 */
 @font-face {
-  font-family: 'Menlo Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Menlo Regular'), url('../Fonts/Menlo-Regular.woff') format('woff');
-  }
+    font-family: "Menlo Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Menlo Regular"),
+        url("../Fonts/Menlo-Regular.woff") format("woff");
+}
 
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #11111d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+  position: sticky;
+  animation: loader 2s infinite ease;
+}
 
 body {
-  color: #eeeeee;
-  background-color: #11111d;
-  font-family: 'PT Mono', monospace;
-  text-align: center;
+    color: #eeeeee;
+    background-color: #11111d;
+    background-image: url("../images/Endless-Constellation.svg");
+    font-family: "PT Mono", monospace;
+    text-align: center;
 }
 
 a {
-  color: #dbe2ef;
-  font-weight: 100;
-  padding: 2%;
+    color: #eeeeee;
+    font-weight: 100;
+    padding: 2%;
+}
+
+.nav-link .fas {
+    font-size: 2rem;
+    margin-right: 2rem;
 }
 
 a:hover {
-  color: #19d3da;
+    color: #19d3da;
 }
 
 h1 {
-  padding-top: 10%;
-  font-family: 'Menlo Regular', monospace;
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding-bottom: 4%;
-  color: #19d3da;
-
+    padding-top: 10%;
+    font-family: "Menlo Regular", monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 4%;
+    color: #19d3da;
 }
 
 h2 {
-  font-size: 2rem;
-  padding-bottom: 2rem;
+    font-size: 2rem;
+    padding-bottom: 2rem;
 }
 
 .terminal {
-  color: #eeeeee;
-  font-size: 1.45rem;
-  font-weight: 300;
+    color: #eeeeee;
+    font-size: 1.45rem;
+    font-weight: 300;
 }
 
-i{
-  margin-top: 1rem;
+i {
+    margin-top: 1rem;
 }
 
 .title {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 @media (max-width: 576px) {
-  .title {
-    margin-top: 4rem;
-  }
+    .title {
+        margin-top: 4rem;
+    }
 }
 
 .brand-img {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .brand-img:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .menu-button {
-  height: 20px;
-  width: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 .bird {
-  display: none;
-  height: 150px;
-  width: 200px;
-  position: absolute;
+    display: none;
+    height: 150px;
+    width: 200px;
+    position: absolute;
 }
 
 .title-image {
-  transform: rotate(45deg);
-  top: 15%;
-  left: 25px;
+    transform: rotate(45deg);
+    top: 15%;
+    left: 25px;
 }
 
 .about-image {
-  transform: rotate(-45deg);
-  top: 15%;
-  right: 25px;
+    transform: rotate(-45deg);
+    top: 15%;
+    right: 25px;
 }
 
 /* Sections*/
-.About-Me, .Skills, .Contact-Me {
-  font-family: 'PT Mono', monospace;
-  line-height: 1.9;
-  padding: 2rem 1rem;
+.About-Me,
+.Skills,
+.Contact-Me {
+    font-family: "PT Mono", monospace;
+    line-height: 1.9;
+    padding: 2rem 1rem;
 }
 
 @media (max-width: 576px) {
-  .About-Me, .Skills, .Contact-Me {
-    padding: 4rem 2rem;
-  }
+    .About-Me,
+    .Skills,
+    .Contact-Me {
+        padding: 4rem 2rem;
+    }
 }
 
-/* About Me */
-.mind-shape, .current-field {
-  color: #19d3da;
-  font-weight: bold;
-}
-
-/* Projects */
-.card{
-  background-color: transparent;
-  border: 0;
-}
-.card-title{
-  font-family: 'Dancing Script',cursive;
-}
-
-.card .btn{
-  background-color: transparent;
-  border-color: #f9f7f7;
-  margin-right: 1rem;
-}
 
 
 /* Skills */
 .list-group-item {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .list-heading {
-  color: #dbe2ef;
+    color: #dbe2ef;
 }
