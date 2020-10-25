@@ -1,10 +1,17 @@
 /* Projects */
 .card {
     background-color: transparent;
-    border: 0;
+    border: 1;
+    box-shadow: 1px 1px #08080e;
 }
 .card-title {
     font-family: "Dancing Script", cursive;
+}
+
+@media(max-width:1000px){
+    .card-title{
+        font-size: 1.4rem;
+    }
 }
 
 .card .btn {

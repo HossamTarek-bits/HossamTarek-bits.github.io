@@ -1,17 +1,8 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li{
-    padding: 0;
-    width: fit-content;
-    margin-bottom: 1rem;
-}
-
-a{
-    padding: 0;
+#Heading{
+    margin-top: 5rem;
+    font-family: "PT Mono", monospace;
+    line-height: 1.9;
+    padding: 2rem 1rem;
 }
 
 h1{
@@ -19,7 +10,75 @@ h1{
     width: fit-content;
 }
 
+@media (max-width:1000px){
+    #Heading{
+        margin-top: 3%;
+    }
+    .row{
+        margin-top: 2rem;
+    }
+}
+
+.dir{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+a{
+    padding: 0;
+}
+
 h2 {
     font-size: 1.3rem;
-    display: inline;
+    display: block;
+    width: fit-content;
+    margin-right: 0;
+}
+
+.portal-container{
+    height: 200px;
+}
+
+.portal{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 16%;
+}
+
+.android,.ai,.embedded,.DB,.cloud,.web{
+    z-index: -1;
+    width: 2rem;
+    height: 1.9rem;
+    position: absolute;
+}
+
+.android{
+    left: 19%;
+    bottom: 0;
+}
+
+.ai{
+    left: 23%;
+    bottom: 0;
+}
+
+.embedded{
+    left: 28%;
+    bottom: 0;
+}
+
+.DB{
+    left: 31%;
+    bottom: 0;
+}
+
+.cloud{
+    left: 33%;
+    bottom: 0;
+}
+
+.web{
+    left: 34%;
+    bottom: 0;
 }

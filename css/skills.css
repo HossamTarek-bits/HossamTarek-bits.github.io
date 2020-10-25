@@ -6,3 +6,8 @@
 .list-heading {
     color: #dbe2ef;
 }
+
+.level{
+    margin-left: 2px !important;
+    color: #19d3da;
+}
