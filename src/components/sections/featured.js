@@ -117,20 +117,26 @@ const StyledProject = styled.li`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--green);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
   }
 
-  .project-title {
-    color: var(--lightest-slate);
-    font-size: clamp(24px, 5vw, 28px);
-
+  .project-type {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    font-weight: 400;
     @media (min-width: 768px) {
       margin: 0 0 20px;
     }
+  }
 
+  .project-title {
+    color: var(--lightest-slate);
+    font-size: clamp(24px, 5vw, 28px);
+    margin: 0;
     @media (max-width: 768px) {
       color: var(--white);
 
@@ -256,7 +262,7 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      background-color: var(--accent);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -314,6 +320,7 @@ const Featured = () => {
           node {
             frontmatter {
               title
+              type
               cover {
                 childImageSharp {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -322,7 +329,6 @@ const Featured = () => {
               tech
               github
               external
-              cta
             }
             html
           }
@@ -355,7 +361,15 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const {
+              external,
+              title,
+              type,
+              tech,
+              github,
+              cover,
+              // cta
+            } = frontmatter;
             const image = getImage(cover);
 
             return (
@@ -367,7 +381,7 @@ const Featured = () => {
                     <h3 className="project-title">
                       <a href={external}>{title}</a>
                     </h3>
-
+                    {type && <p className="project-type">{type}</p>}
                     <div
                       className="project-description"
                       dangerouslySetInnerHTML={{ __html: html }}
@@ -382,17 +396,17 @@ const Featured = () => {
                     )}
 
                     <div className="project-links">
-                      {cta && (
+                      {/* {cta && (
                         <a href={cta} aria-label="Course Link" className="cta">
                           Learn More
                         </a>
-                      )}
+                      )} */}
                       {github && (
                         <a href={github} aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
-                      {external && !cta && (
+                      {external && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>

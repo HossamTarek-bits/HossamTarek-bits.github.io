@@ -8,7 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
-
+import logoImage from '../images/logo.png';
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: #04001a;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -33,17 +33,17 @@ const StyledHeader = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
-    props.scrollDirection === 'up' &&
+      props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
+        background-color: #04001a16;
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
     ${props =>
-    props.scrollDirection === 'down' &&
+      props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -66,7 +66,7 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
-      color: var(--green);
+      color: var(--accent);
       width: 42px;
       height: 42px;
       position: relative;
@@ -85,16 +85,6 @@ const StyledNav = styled.nav`
       .logo-container {
         position: relative;
         z-index: 1;
-        svg {
-          fill: none;
-          user-select: none;
-          @media (prefers-reduced-motion: no-preference) {
-            transition: var(--transition);
-          }
-          polygon {
-            fill: var(--navy);
-          }
-        }
       }
 
       &:hover,
@@ -135,7 +125,7 @@ const StyledLinks = styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: var(--accent);
           font-size: var(--fz-xxs);
           text-align: right;
         }
@@ -183,25 +173,11 @@ const Nav = ({ isHome }) => {
 
   const Logo = (
     <div className="logo" tabIndex="-1">
-      {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </a>
-      ) : (
-        <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </Link>
-      )}
+      <a href="/" aria-label="home">
+        <div className="logo-container">
+          <img src={logoImage} alt="Logo" />
+        </div>
+      </a>
     </div>
   );
 

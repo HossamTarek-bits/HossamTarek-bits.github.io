@@ -18,15 +18,19 @@ const Head = ({ title, description, image }) => {
             defaultDescription: description
             siteUrl
             defaultImage: image
-            twitterUsername
           }
         }
       }
     `,
   );
 
-  const { defaultTitle, defaultDescription, siteUrl, defaultImage, twitterUsername } =
-    site.siteMetadata;
+  const {
+    defaultTitle,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    // twitterUsername
+  } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
@@ -48,11 +52,13 @@ const Head = ({ title, description, image }) => {
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={twitterUsername} />
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#040019" />
+      <meta name="msapplication-TileColor" content="#040019" />
+      <meta name="theme-color" content="#040019" />
 
       <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
     </Helmet>
