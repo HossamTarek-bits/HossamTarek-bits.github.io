@@ -5,7 +5,7 @@ module.exports = {
     title: 'Hossam Elbeialy',
     description: `Hossam Elbeialy is a software engineer who creates awesome web and mobile apps using cutting-edge technologies and frameworks. He also has a knack for algorithms and problem-solving. And he's Batman. 🦇`,
     siteUrl: 'https://hossamtarek-bits.github.io', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/logo.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -5,7 +5,7 @@
   "author": "Hossam Elbeialy <hossamelbeialy>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HossamTarek-bits/HossamTarek-bits.github.io"
+    "url": "https://hossamtarek-bits.github.io/"
   },
   "keywords": [
     "gatsby"
@@ -21,7 +21,8 @@
     "clean": "gatsby clean",
     "prepare": "husky install",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "publish": "gh-pages -d public"
   },
   "lint-staged": {
     "*.{js,css,json,md}": [

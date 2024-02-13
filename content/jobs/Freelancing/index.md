@@ -1,5 +1,5 @@
 ---
-date: 'present'
+date: '2024-02-13'
 title: 'Software Engineer Freelancer'
 company: 'Freelancer.com / Upwork.com'
 range: 'Sep 2021 - Present'
