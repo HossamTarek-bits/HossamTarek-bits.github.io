@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled, { css } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo, IconHex } from '@components/icons';
-import logoImage from '../images/logo.png';
+import SpritePage from '../images/sprite-64.png';
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -53,6 +52,50 @@ const StyledHeader = styled.header`
   }
 `;
 
+const animation = keyframes`
+  from{ background-position: 0px } to { background-position: -576px; }
+`;
+
+const pulse = keyframes`
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+`;
+
+const reverseAnimation = keyframes`
+  from{ background-position: -576px } to { background-position: 0px; }
+`;
+
+const BatLogo = styled.div`
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  background: url(${SpritePage}) left center;
+
+  animation: ${reverseAnimation} 0.5s steps(9) 1, ${pulse} 1.5s infinite;
+  // background-position: -576px;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+
+  &:hover {
+    animation: ${animation} 0.5s steps(9) 1;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+`;
+
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
@@ -67,33 +110,14 @@ const StyledNav = styled.nav`
 
     a {
       color: var(--accent);
-      width: 42px;
-      height: 42px;
+      width: 64px;
+      height: 64px;
       position: relative;
       z-index: 1;
-
-      .hex-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
-      }
 
       .logo-container {
         position: relative;
         z-index: 1;
-      }
-
-      &:hover,
-      &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
       }
     }
   }
@@ -175,7 +199,8 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       <a href="/" aria-label="home">
         <div className="logo-container">
-          <img src={logoImage} alt="Logo" />
+          {/* <img src={logoImage} alt="Logo" /> */}
+          <BatLogo />
         </div>
       </a>
     </div>

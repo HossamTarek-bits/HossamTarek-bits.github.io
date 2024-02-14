@@ -176,9 +176,11 @@ const Jobs = () => {
             frontmatter {
               title
               company
+              companies
               location
               range
               url
+              urls
             }
             html
           }
@@ -250,7 +252,7 @@ const Jobs = () => {
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
           {jobsData &&
             jobsData.map(({ node }, i) => {
-              const { company } = node.frontmatter;
+              const { company, companies } = node.frontmatter;
               return (
                 <StyledTabButton
                   key={i}
@@ -262,7 +264,7 @@ const Jobs = () => {
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}>
-                  <span>{company}</span>
+                  <span>{companies ? companies.join(' / ') : company}</span>
                 </StyledTabButton>
               );
             })}
@@ -273,7 +275,7 @@ const Jobs = () => {
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { title, url, urls, company, companies, range } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -288,6 +290,20 @@ const Jobs = () => {
                       <span>{title}</span>
                       <span className="company">
                         &nbsp;@&nbsp;
+                        {companies ? (
+                          companies.map((company, i) => (
+                            <span key={i}>
+                              <a key={i} href={urls[i]} className="inline-link">
+                                {company}
+                              </a>
+                              {i === companies.length - 1 ? '' : ' / '}
+                            </span>
+                          ))
+                        ) : (
+                          <a href={url} className="inline-link">
+                            {company}
+                          </a>
+                        )}
                         <a href={url} className="inline-link">
                           {company}
                         </a>

@@ -45,10 +45,10 @@ const BatLogo = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background: url(${SpritePage}) left center;
-  animation: ${animation} 0.8s steps(10) infinite;
+  animation: ${animation} 0.5s steps(10) infinite;
   animation-fill-mode: both;
   animation-direction: alternate;
-  animation-delay: 0.7s;
+  animation-delay: 0.3s;
 `;
 
 const Loader = ({ finishLoading }) => {
@@ -58,7 +58,7 @@ const Loader = ({ finishLoading }) => {
     const timeout = setTimeout(() => {
       setIsMounted(true);
       finishLoading();
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timeout);
   }, []);
 

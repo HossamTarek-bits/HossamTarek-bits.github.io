@@ -1,9 +1,13 @@
 ---
 date: '2024-02-13'
 title: 'Software Engineer Freelancer'
-company: 'Freelancer.com / Upwork.com'
+companies: ['Freelancer.com', 'Upwork.com']
 range: 'Sep 2021 - Present'
-url: 'https://www.freelancer.com/u/HossamTarek226'
+urls:
+  [
+    'https://www.freelancer.com/u/HossamTarek226',
+    'https://www.upwork.com/freelancers/~017abfc2731a207ff8',
+  ]
 ---
 
 - Worked on multiple projects with different clients from different countries.
