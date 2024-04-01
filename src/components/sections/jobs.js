@@ -89,8 +89,9 @@ const StyledTabButton = styled.button`
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--lightest-navy);
+    border-bottom: 0;
     text-align: center;
+    white-space: break-spaces;
   }
 
   &:hover,
@@ -115,7 +116,7 @@ const StyledHighlight = styled.div`
   @media (max-width: 600px) {
     top: auto;
     bottom: 0;
-    width: 100%;
+    width: 0;
     max-width: var(--tab-width);
     height: 2px;
     margin-left: 50px;
