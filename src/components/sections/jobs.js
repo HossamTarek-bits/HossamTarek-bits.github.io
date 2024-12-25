@@ -305,9 +305,9 @@ const Jobs = () => {
                             {company}
                           </a>
                         )}
-                        <a href={url} className="inline-link">
+                        {/* <a href={url} className="inline-link">
                           {company}
-                        </a>
+                        </a> */}
                       </span>
                     </h3>
 
